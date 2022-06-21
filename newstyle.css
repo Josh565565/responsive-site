@@ -186,7 +186,7 @@ main {
     flex-direction: column;
     padding: 2vw 4vw;
     width: 260px;
-    height: 335px;
+    height: 355px;
     border-radius: 8px;
     align-items: center;
     padding-top: 10px;
@@ -213,14 +213,13 @@ main {
   }
   .form_div p {
     width: 270px;
-    font-size: 9px;
+    font-size: 10px;
     margin-top: -15px;
-    /* padding-top: 1px; */
-    font-family: "Poppins", sans-serif;
+
   }
   .span_two {
-    color: hsl(0, 90%, 49%);;
-    font-weight: 750;
+    color: hsl(0, 90%, 49%);
+    font-size: 10px;
   }
   .form-control {
     position: relative;
