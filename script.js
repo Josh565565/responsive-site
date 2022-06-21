@@ -1,40 +1,73 @@
-const form = document.getElementById('form');
-const first_name = document.getElementById('first_name');
-const last_name = document.getElementById('last_name');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
 
-form.addEventListener('CLAIM YOUR FREE TRIAL', (e) => {
-    e.preventDefault();
-    
-    checkInputs();
+document.getElementById("submit").addEventListener("click",function(event){
+    event.preventDefault();
+
+    checkData();
 });
 
-function checkInputs() {
-    // get the values from the inputs
-    const first_nameValue = first_name.value.trim();
-    const last_nameValue = last_name.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const passwordZValue = passwordZ.value.trim();
+var firstname = document.getElementById("firstname");
+var lastname = document.getElementById("lastname");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
 
-    if(first_nameValue === '') {
-        // show error
-        // add error class
-        setErrorFor(first_name, 'First name cannot be blank')
-    } else {
-        // add success class 
-        setSuccessFor(first_name);
+function checkData(){
+    var firstnameValue = firstname.value.trim();
+    var lastnameValue = lastname.value.trim();
+    var emailValue = email.value.trim();
+    var passwordValue = password.value.trim();
+    
+    if(firstnameValue == ""){
+        setError(firstname,"First Name cannot be empty");
+    }else{
+        setSuccess(firstname);
     }
+
+    if(lastnameValue == ""){
+        setError(lastname,"Last Name cannot be empty");
+    }else{
+        setSuccess(lastname);
+    }
+
+
+    if(emailValue == ""){
+        setError(email,"Email cannot be empty");
+    }
+    else if(!isEmail(emailValue)){
+        setError(email,"Looks like this is not an email");
+    }
+    else{
+        setSuccess(email);
+    }
+
+    if(passwordValue == ""){
+        setError(password,"Password cannot be empty");
+    }else{
+        setSuccess(password);
+    }
+
+
+
+
 }
 
- function setErrorFor(input, message) {
-     const formControl = input.parentElement; //.form-control
-     const small = formControl.querySelector('small'); 
 
-     // add error message inside small
-     small.innerText = message;
+function setError(u, msg){
+    var parentBox = u.parentElement;
+    parentBox.className="form-control error";
+var span = parentBox.querySelector("span");
+var fa = parentBox.querySelector(".fa");
+span.innerText=msg;
+fa.className="fa fa-exclamation-circle";
+}
 
-     // add error class
-     formControl.className = 'form-control error';
- }
+function setSuccess(u){
+    var parentBox = u.parentElement;
+    parentBox.className="form-control success";
+    var fa = parentBox.querySelector(".fa");
+    fa.className="fa fa-check-circle";
+}
+
+function isEmail(e){
+    var reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return reg.test(e);
+}
