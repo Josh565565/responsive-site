@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
+
     <link
       rel="shortcut icon"
       type="images/png"
@@ -30,14 +30,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="newstyle.css" />
-
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
-    <script src="script.js"></script>
     <div class="wrapper">
       <main>
         <div class="first_div">
@@ -54,33 +56,38 @@
             ><br class="break" />then $20/mo. thereafter
           </p>
 
-          <div class="form_div" id="form">
-            <form action="" id="form">
+          <div class="form_div">
+            <form class="form" id="form">
               <div class="form-control">
-                <input type="text" placeholder="First Name" id="first_name" required/>
-                <img src="images/icon-error.svg" alt="error image" />
-                <small>First name cannot be empty</small>
+                <input type="text" placeholder="First Name" id="firstname" />
+                <i class="fa" aria-hidden="true"></i>
+                <span></span>
               </div>
 
               <div class="form-control">
-                <input type="text" placeholder="Last Name" id="last_name" required/>
-                <img src="images/icon-error.svg" alt="error image" />
-                <small>Last name cannot be empty</small>
+                <input type="text" placeholder="Last Name" id="lastname" />
+                <i class="fa" aria-hidden="true"></i>
+                <span></span>
               </div>
 
               <div class="form-control">
-                <input type="email" placeholder="Email Address" id="email" required/>
-                <img src="images/icon-error.svg" alt="error image" />
-                <small>Looks like this is not an email</small>
+                <input type="email" placeholder="Email Address" id="email" />
+                <i class="fa" aria-hidden="true"></i>
+                <span></span>
               </div>
 
               <div class="form-control">
-                <input type="password" placeholder="Password" id="password" required/>
-                <img src="images/icon-error.svg" alt="error image" />
-                <small>password cannot be empty</small>
+                <input type="password" placeholder="Password" id="password" />
+                <i class="fa" aria-hidden="true"></i>
+                <span></span>
               </div>
 
-              <button>CLAIM YOUR FREE TRIAL</button>
+              <input
+                class="button"
+                type="submit"
+                id="submit"
+                value="CLAIM YOUR FREE TRIAL"
+              />
             </form>
             <p>
               By clicking the button, you are agreeing to our
@@ -90,5 +97,6 @@
         </div>
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
