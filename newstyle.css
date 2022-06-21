@@ -58,7 +58,7 @@ main {
   padding-top: 10px;
   margin-left: 20px;
   width: 320px;
-  height: 380px;
+  height: 390px;
   border-radius: 8px;
   align-items: center;
 }
@@ -68,14 +68,15 @@ main {
   margin: 15px;
   padding: 5px;
   outline: none;
+  border-radius: 5px;
 }
-.form_div button {
+.form_div .button {
   display: block;
   margin-left: 10px;
   margin-top: 10px;
   width: 280px;
-  height: 40px;
-  background-color: hsl(138, 68%, 32%);
+  height: 45px;
+  background-color: hsl(138, 59%, 52%);
   border: 0;
   border-radius: 2px;
   color: aliceblue;
@@ -95,33 +96,43 @@ main {
 }
 
 .form-control {
-    position: relative;
+  position: relative;
 }
-.form-control img {
-    position: absolute;
-    top: 25px;
-    right: 40px;
-    visibility: hidden;
-    width: 20px;
+.form-control .fa {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  width: 20px;
 }
-.form-control small {
-    visibility: hidden;
-    position: absolute;
-    bottom: -8px;
-    left: 160px;
+.form .form-control.error input {
+  border-color: #e74e36;
+  border-width: 2px;
 }
-.form-control.error small {
-    visibility: visible;
-    color: #e74e36;
+.form .form-control.error .fa {
+  color: #e74e36;
 }
-.form-control.success input {
-    border-color: #2acc71;
+.form .form-control.success input {
+  border-color: #2acc71;
+  border-width: 2px;
 }
-.form-control.error input {
-    border-color: #e74e36;
+.form .form-control.success .fa {
+  color: #2acc71;
 }
-.form-control.error img {
-    visibility: visible;
+.form .form-control span {
+  display: none;
+}
+.form .form-control.error span {
+  position: absolute;
+  bottom: -8px;
+  right: 25px;
+  color: #e74e36;
+  display: block;
+}
+.form .form-control.success span {
+  position: absolute;
+  bottom: -8px;
+  left: 130px;
+  color: #2acc71;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -147,21 +158,20 @@ main {
   }
   .first_div .para_1 {
     color: white;
-    width: 500px;  
+    width: 500px;
     font-family: "Poppins", sans-serif;
     text-align: justify;
     font-size: 14px;
-
   }
   .second_div {
     margin-left: 220px;
   }
   .break {
-      display: none;
+    display: none;
   }
   .second_div .para_2 {
     background-color: hsl(249, 38%, 56%);
-    width: 370px;
+    width: 382px;
     height: 30px;
     margin-bottom: 10px;
     text-align: center;
@@ -179,19 +189,22 @@ main {
     height: 335px;
     border-radius: 8px;
     align-items: center;
+    padding-top: 10px;
   }
   .form_div input {
     width: 280px;
     margin: 15px;
     padding: 5px;
     outline: none;
+    border-radius: 5px;
   }
-  .form_div button {
+  .form_div .button {
     display: block;
     margin-left: 10px;
+    margin-top: 20px;
     width: 295px;
-    height: 30px;
-    background-color: hsl(154, 59%, 51%);
+    height: 36px;
+    background-color: hsl(138, 59%, 52%);
     border: 0;
     border-radius: 2px;
     color: aliceblue;
@@ -200,10 +213,52 @@ main {
   }
   .form_div p {
     width: 270px;
-    font-size: 10px;
-    padding-top: 10px;
+    font-size: 9px;
+    margin-top: -15px;
+    /* padding-top: 1px; */
+    font-family: "Poppins", sans-serif;
   }
   .span_two {
-    color: hsl(0, 100%, 74%);
+    color: hsl(0, 90%, 49%);;
+    font-weight: 750;
+  }
+  .form-control {
+    position: relative;
+  }
+  .form-control .fa {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+    width: 20px;
+  }
+  .form .form-control.error input {
+    border-color: #e74e36;
+    border-width: 2px;
+  }
+  .form .form-control.error .fa {
+    color: #e74e36;
+  }
+  .form .form-control.success input {
+    border-color: #2acc71;
+    border-width: 2px;
+  }
+  .form .form-control.success .fa {
+    color: #2acc71;
+  }
+  .form .form-control span {
+    display: none;
+  }
+  .form .form-control.error span {
+    position: absolute;
+    bottom: -8px;
+    right: 15px;
+    color: #e74e36;
+    display: block;
+  }
+  .form .form-control.success span {
+    position: absolute;
+    bottom: -8px;
+    left: 130px;
+    color: #2acc71;
   }
 }
