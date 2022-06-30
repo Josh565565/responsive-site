@@ -167,12 +167,18 @@ main {
     display: none;
   }
   .topDiv {
-  background-color: hsl(249, 38%, 56%);
-  width: 370px;
-  height: 30px;
-  margin-bottom: 10px;
-  text-align: center;
-  border-radius: 5px;
+    float: right;
+    margin-right: 50px;
+    background-color: hsl(249, 38%, 56%);
+    width: 370px;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .topDiv p {
+    float: right;
+    margin-right: 50px;
   }
   .span_one {
     color: white;
