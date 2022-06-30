@@ -35,7 +35,7 @@ main {
   padding: 20px;
   font-family: "Poppins", sans-serif;
 }
-.second_div .para_2 {
+.topDiv {
   color: rgb(189, 193, 197);
   padding-top: 20px;
   margin-left: 20px;
@@ -135,19 +135,19 @@ main {
   color: #2acc71;
 }
 
-@media only screen and (min-width: 1000px) {
+@media  screen and (min-width: 1000px) {
   .wrapper {
-    width: 1440px;
+    width: 1000px;
     margin: 0 auto;
   }
   main {
     display: flex;
-    height: 100vh;
     margin: auto;
+    align-items: center;
     align-items: center;
   }
   .first_div {
-    margin-left: 200px;
+    margin-left: 20px;
   }
   .first_div h1 {
     word-spacing: 6px;
@@ -163,19 +163,16 @@ main {
     text-align: justify;
     font-size: 14px;
   }
-  .second_div {
-    margin-left: 220px;
-  }
   .break {
     display: none;
   }
-  .second_div .para_2 {
-    background-color: hsl(249, 38%, 56%);
-    width: 370px;
-    height: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-    border-radius: 5px;
+  .topDiv {
+  background-color: hsl(249, 38%, 56%);
+  width: 370px;
+  height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
   }
   .span_one {
     color: white;
@@ -200,7 +197,7 @@ main {
   }
   .form_div .button {
     display: block;
-    margin-left: 13px;
+    margin-left: 10px;
     margin-top: 20px;
     width: 295px;
     height: 36px;
